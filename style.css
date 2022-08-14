@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400&family=Barlow:wght@100;300;400&display=swap");
+@import "components/hero/hero.css";
+@import "components/gallery/gallery.css";
+@import "components/loading/loading.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  max-width: 1200px;
+  padding: 0 5%;
+  margin: auto;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  color: #3f3f3f;
+}
