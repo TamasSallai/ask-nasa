@@ -2,6 +2,7 @@
 @import "components/hero/hero.css";
 @import "components/gallery/gallery.css";
 @import "components/loading/loading.css";
+@import "components/date-picker/date-picker.css";
 
 *,
 *::before,

@@ -12,6 +12,6 @@ const GalleryComponent = (dataList) => {
 }
 
 const ImageComponent = (date, src) =>
-  `<a id="${date}" class="img-container" href="#hero-component"><img src="${src}" alt="" /></a>`
+  `<a data-img-date="${date}" class="img-container" href="#hero-component"><img src="${src}" alt="" /></a>`
 
 export default GalleryComponent
