@@ -60,3 +60,9 @@ dateForm.addEventListener("submit", async (e) => {
   const data = await getData(e.target[0].value)
   loadHero(data)
 })
+
+window.addEventListener("scroll", () => {
+  const gallery = document.querySelector(".masonry-container")
+  console.log(gallery.getBoundingClientRect().top)
+  console.log(window.innerHeight)
+})

@@ -1,17 +1,27 @@
 const GalleryComponent = (dataList) => {
-  let imageComponents = ""
-  dataList.forEach(({ date, url }) => {
-    imageComponents += ImageComponent(date, url)
+  let galleryItems = ""
+
+  dataList.reverse()
+  dataList.forEach(({ media_type, date, url }) => {
+    galleryItems += GalleryItemComponent(media_type, date, url)
   })
 
   return /*html*/ `
-    <div class="masonry-container">
-      ${imageComponents}
-    </div>
-  `
+    <div id="gallery" class="masonry-container">
+      ${galleryItems}
+    </div>`
 }
 
-const ImageComponent = (date, src) =>
-  `<a data-img-date="${date}" class="img-container" href="#hero-component"><img src="${src}" alt="" /></a>`
+const GalleryItemComponent = (mediaType, date, src) => {
+  if (mediaType === "video") {
+    const videoId = src.substring(src.lastIndexOf("/") + 1, src.indexOf("?"))
+    src = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`
+  }
+
+  return /*html*/ `
+    <a data-img-date="${date}" class="img-container" href="#hero-component">
+      <img src="${src}" alt="" />
+    </a>`
+}
 
 export default GalleryComponent
